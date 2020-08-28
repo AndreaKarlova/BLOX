@@ -79,6 +79,7 @@ if __name__ == '__main__':
     parser.add_argument("features_observed")
     parser.add_argument("features_unchecked")
     parser.add_argument("properties_observed")
+    parser.add_argument("properties_unchecked")
     parser.add_argument("--sigma", type = float, default = 0.1)
     parser.add_argument("--prediction_model", default = 'RF')
     parser.add_argument("--iteration_num", type = int, default = 20)
@@ -87,6 +88,7 @@ if __name__ == '__main__':
     features_observed_path = args.features_observed
     features_unchecked_path = args.features_unchecked
     properties_observed_path = args.properties_observed
+    properties_unchecked_path = args.properties_unchecked
     sigma = args.sigma
     prediction_model = args.prediction_model
     num_loop = args.iteration_num    
@@ -97,7 +99,7 @@ if __name__ == '__main__':
     predicted_properties_path = 'predicted_properties_of_unchecked_data.csv'
     sn_score_path = 'Stein_novelties_of_unchecked_data.csv'
     recommended_data_path = 'recommend_data_by_BLOX.csv'
-    properties_unchecked_path = 'properties_of_unchecked_data.csv'     
+    #properties_unchecked_path = 'properties_of_unchecked_data.csv'     
     random.seed(0)
     np.random.seed(0)
 
